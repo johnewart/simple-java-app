@@ -8,3 +8,6 @@ dependencies:
 build:
   commands:
     - mvn package
+exec:
+  commands:
+    - java -jar target/my-app-1.0-SNAPSHOT.jar
