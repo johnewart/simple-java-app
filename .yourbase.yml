@@ -7,7 +7,6 @@ dependencies:
     - maven:3.3.3
 build:
   commands:
-    - sleep 30
     - sh env.sh
     - mvn package
 exec:
