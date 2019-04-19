@@ -8,9 +8,7 @@ dependencies:
 build:
   commands:
     - sleep 30
-    - sh -c 'echo "${YB_GIT_COMMIT}"'
-    - sh -c 'echo "${YB_GIT_BRANCH}"'
-    - sh -c 'echo "${SAMWISE}"'
+    - sh env.sh
     - mvn package
 exec:
   commands:
