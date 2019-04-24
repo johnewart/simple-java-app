@@ -1,0 +1,49 @@
+   
+dependencies:
+  runtime:
+    - java:8.202.08
+    - maven:3.3.3
+  build:
+    - java:8.202.08
+    - maven:3.3.3
+
+build_targets:
+  - name: test
+    commands:
+      - mvn package
+
+  - name: android
+    tags:
+      os: linux
+    build_after:
+      - test
+    commands:
+      - echo "ANNNNNNDROIIIIIID"
+
+  - name: ios
+    tags:
+      os: darwin
+    build_after:
+      - test
+    commands:
+      - echo "EEYYYYYEEEPHOOOONEEE"
+
+ci:
+  builds:
+  - name: test_build
+    build_target: test
+
+  - name: ios_build
+    build_target: ios
+    conditions:
+      branch:
+        in:
+          - master
+          - test
+
+  - name: android_build
+    build_target: android
+    conditions:
+      branch:
+        tag: true
+ 
