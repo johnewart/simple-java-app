@@ -11,7 +11,7 @@ build_targets:
   - name: test
     commands:
       - mvn package
-      - sh sleepy.sh
+      - bash sleepy.sh
 
   - name: android
     tags:

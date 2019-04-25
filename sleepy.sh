@@ -1,2 +1,7 @@
 echo "Sleeping for 3 minutes..."
-sleep 180
+for i in {1..180}
+do 
+  echo $i
+  sleep 1
+done
+
