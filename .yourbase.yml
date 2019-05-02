@@ -10,6 +10,7 @@ dependencies:
 build_targets:
   - name: test
     commands:
+      - sh sleepy.sh
       - mvn package
 
   - name: android
