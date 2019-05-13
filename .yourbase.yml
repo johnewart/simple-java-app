@@ -33,6 +33,7 @@ ci:
   builds:
   - name: test_build
     build_target: test
+    report_status: false
 
   - name: ios_build
     build_target: ios
