@@ -34,7 +34,7 @@ ci:
   - name: test_build
     build_target: test
     report_status: false
-    when: branch == master AND action != pull_request
+    when: branch is 'master' AND action is not 'pull_request'
 
   - name: ios_build
     build_target: ios
