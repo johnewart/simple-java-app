@@ -36,17 +36,11 @@ ci:
     report_status: false
     when: branch is 'master' AND action is not 'pull_request'
 
-  - name: ios_build
-    build_target: ios
-    conditions:
-      branch:
-        in:
-          - master
-          - test
+  - name: quick_test
+    build_target: test
+    when: branch is 'master' AND action is 'pull_request'
 
-  - name: android_build
+  - name: release
     build_target: android
-    conditions:
-      branch:
-        tag: true
+    when: tagged is true AND branch is 'master'
  
