@@ -9,6 +9,9 @@ dependencies:
 
 build_targets:
   - name: test
+    container:
+      image: maven:3.3.3
+      workdir: /code
     commands:
       - bash sleepy.sh
       - mvn package
