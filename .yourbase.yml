@@ -13,7 +13,6 @@ build_targets:
       image: maven:3.3.3
       workdir: /code
     commands:
-      - bash sleepy.sh
       - mvn package
 
   - name: android
