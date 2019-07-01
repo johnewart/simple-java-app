@@ -47,6 +47,11 @@ ci:
   - name: pull_request_builds
     build_target: test
     when: branch is 'master' AND action is 'pull_request'
+   
+  - name: master_or_pr
+    build_target: default
+    report_status: true
+    when: branch is 'master' OR action is 'pull_request'
 
   - name: release
     build_target: release
