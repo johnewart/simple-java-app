@@ -8,12 +8,22 @@ dependencies:
 
 build_targets:
   - name: default
+    tags:
+      channel: experimental
     commands:
-      - bash sleepy.sh
       - mvn package 
 
   - name: test
+    tags:
+      channel: experimental
     commands:
+      - mvn package
+
+  - name: pullrequest
+    tags:
+      channel: experimental
+    commands:
+      - echo "PULL REQUEST BUILD"
       - mvn package
 
   - name: container_build
@@ -53,6 +63,10 @@ ci:
     build_target: default
     report_status: true
     when: branch is 'master' OR action is 'pull_request'
+   
+  - name: pull request from any branch 
+    build_target: pullrequest
+    when: action is 'pull_request'
 
   - name: release
     build_target: release
