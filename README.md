@@ -1,1 +1,1 @@
-Hi
+# Simple Java App
