@@ -37,18 +37,6 @@ build_targets:
 
 ci:
   builds:
-  - name: accelerated
-    build_target: accelerated 
-
-  - name: master_builds
-    build_target: default
-    report_status: false
-    when: branch is 'master' AND action is not 'pull_request'
-
-  - name: pull_request_builds
-    build_target: test
-    when: branch is 'master' AND action is 'pull_request'
-   
   - name: master_or_pr
     build_target: default
     report_status: true
