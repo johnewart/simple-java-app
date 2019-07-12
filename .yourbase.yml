@@ -9,7 +9,6 @@ dependencies:
 build_targets:
   - name: default
     commands:
-      - bash sleepy.sh
       - mvn package 
 
   - name: test
