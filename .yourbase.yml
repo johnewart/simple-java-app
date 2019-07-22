@@ -44,4 +44,7 @@ ci:
   - name: release
     build_target: release
     when: tagged is true
+  
+  - name: container_build
+    build_target: container_build
  
