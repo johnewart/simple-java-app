@@ -20,7 +20,7 @@ build_targets:
 
   - name: container_build
     container:
-      image: maven:3.3.3
+      image: yourbase/yb_ubuntu:18.04
       workdir: /code
     commands:
       - mvn package
