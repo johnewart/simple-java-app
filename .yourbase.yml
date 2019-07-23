@@ -8,6 +8,8 @@ dependencies:
 
 build_targets:
   - name: default
+    container:
+      image: yourbase/yb_ubuntu:18.04
     commands:
       - mvn package 
 
