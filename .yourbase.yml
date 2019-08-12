@@ -46,7 +46,7 @@ ci:
 
   - name: tag_test
     build_target: release
-    when: branch matches 'refs/tags/0.*'
+    when: not branch matches 'refs/tags/0.*'
     
 #  - name: release
 #    build_target: release
