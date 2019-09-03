@@ -2,7 +2,7 @@ echo "Sleeping for 30 seconds..."
 echo "I SPY A SECRET: ${SNARF}"
 echo "I SPY ANOTHER SECRET: ${FOOBAR}"
 
-for i in {1..5}
+for i in {1..4}
 do 
   echo $i
   sleep 1
