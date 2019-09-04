@@ -37,21 +37,22 @@ build_targets:
     commands:
       - echo KRAKEN
 
-ci:
-  builds:
-  - name: master_or_pr
-    build_target: accelerated
-    report_status: true
-    when: branch is 'master' OR action is 'pull_request'
-
-  - name: tag_test
-    build_target: release
-    when: tagged is true and not branch matches 'refs/tags/0.*'
-    
+# Only build when the override is forced.
+#ci:
+#  builds:
+#  - name: master_or_pr
+#    build_target: accelerated
+#    report_status: true
+#    when: branch is 'master' OR action is 'pull_request'
+#
+#  - name: tag_test
+#    build_target: release
+#    when: tagged is true and not branch matches 'refs/tags/0.*'
+#    
 #  - name: release
 #    build_target: release
 #    when: tagged is true
-  
-  - name: container_build
-    build_target: container_build
+#  
+#  - name: container_build
+#    build_target: container_build
  
