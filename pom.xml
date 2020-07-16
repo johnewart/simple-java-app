@@ -8,12 +8,12 @@
   <name>my-app</name>
   <url>http://maven.apache.org</url>
 
-    <repositories>
-        <repository>
+    <pluginRepositories>
+        <pluginRepository>
             <id>yourbase-release</id>
             <url>http://yourbase-artifacts.s3-website-us-west-2.amazonaws.com/maven/release</url>
-        </repository>
-    </repositories>
+        </pluginRepository>
+    </pluginRepositories>
 
   <dependencies>
     <dependency>
