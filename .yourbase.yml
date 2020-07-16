@@ -41,6 +41,6 @@ build_targets:
 ci:
   builds:
   - name: master_or_pr
-    build_target: accelerated
+    build_target: default
     report_status: true
     when: branch is 'master' OR action is 'pull_request'
