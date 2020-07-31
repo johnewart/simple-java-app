@@ -1,5 +1,6 @@
 package com.mycompany.app;
 
+import com.mycompany.app.App; 
 import org.junit.Test;
 
 /**
@@ -19,5 +20,11 @@ public class AppTest
     public void testApp()
     {
    
+    }
+    
+    @Test
+    public void testTheApp() {
+        []String args = { "hello", "world" };
+        App.main(args);
     }
 }
