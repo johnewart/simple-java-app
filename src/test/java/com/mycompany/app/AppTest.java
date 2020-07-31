@@ -9,7 +9,7 @@ public class AppTest
 {
     @Test
     public void testAnotherThing() { 
-        assertTrue(true);
+        System.out.println("OHAI");
     }
 
     /**
@@ -18,6 +18,6 @@ public class AppTest
     @Test
     public void testApp()
     {
-        assertTrue( true );
+   
     }
 }
