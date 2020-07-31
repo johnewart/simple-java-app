@@ -3,5 +3,6 @@ public class Foo {
    public Foo() { 
       this.name = "OHAI";
       System.err.println(this.name);
+      System.err.println(this.name);
    }
 }
