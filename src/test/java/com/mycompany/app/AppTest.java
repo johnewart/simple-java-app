@@ -24,7 +24,7 @@ public class AppTest
     
     @Test
     public void testTheApp() {
-        []String args = { "hello", "world" };
+        String[] args = { "hello", "world" };
         App.main(args);
     }
 }
