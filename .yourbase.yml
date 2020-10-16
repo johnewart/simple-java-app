@@ -9,6 +9,7 @@ dependencies:
 # Build targets
 build_targets:
   - name: default
+    host_only: true
     container:
       image: yourbase/yb_ubuntu:18.04
     commands:
